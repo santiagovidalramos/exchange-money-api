@@ -1,7 +1,7 @@
 FROM openjdk:8-jdk-alpine
 
-ARG JAR_FILE=target/money-exchange-api-1.0-SNAPSHOT.jar
-
-WORKDIR /usr/local/runme
+ARG JAR_FILE=target/money-exchange-api.jar
 
 COPY ${JAR_FILE} app.jar
+
+ENTRYPOINT ["java","jar","/app.jar"]
