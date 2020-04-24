@@ -4,4 +4,4 @@ ARG JAR_FILE=target/money-exchange-api.jar
 
 COPY ${JAR_FILE} app.jar
 
-ENTRYPOINT ["java","jar","/app.jar"]
+ENTRYPOINT ["java","-jar","/app.jar"]
